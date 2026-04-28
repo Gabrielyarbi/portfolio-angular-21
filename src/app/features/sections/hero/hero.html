@@ -1,0 +1,57 @@
+<section class="hero container">
+
+  <div class="hero__status">
+    <span class="pulse"></span>
+    Disponible para nuevos proyectos
+  </div>
+
+  <h1 class="hero__title">
+    Backend Developer <br />
+    construyendo
+    <span class="accent-grad">
+      sistemas que escalan
+    </span>
+  </h1>
+
+  <p class="hero__lead">
+    Soy <strong>Gabriel Horacio Yarbi</strong>.
+    +5 años diseñando y manteniendo sistemas
+    en producción con <strong>Node.js</strong>,
+    <strong>NestJS</strong>,
+    <strong>AWS Serverless</strong> y
+    arquitecturas de microservicios para
+    logística y transporte.
+  </p>
+
+  <div class="hero__actions">
+    @for (action of actions(); track action.href) {
+      <a
+        [href]="action.href"
+        class="btn"
+        [class.btn--primary]="action.variant === 'primary'"
+        [class.btn--ghost]="action.variant === 'ghost'"
+      >
+        {{ action.label }}
+      </a>
+    }
+  </div>
+
+  <ul class="hero__meta">
+    @for (contact of contacts(); track contact.label) {
+      <li>
+
+        <span>{{ contact.icon }}</span>
+
+        @if (contact.href) {
+          <a [href]="contact.href">
+            {{ contact.label }}
+          </a>
+        } @else {
+          <span>{{ contact.label }}</span>
+        }
+
+      </li>
+    }
+  </ul>
+
+</section>

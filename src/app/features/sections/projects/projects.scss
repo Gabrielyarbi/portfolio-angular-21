@@ -1,0 +1,123 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.project--reverse {
+  grid-template-columns: 1fr 1.1fr;
+
+  .project__media {
+    order: 2;
+  }
+
+  .project__body {
+    order: 1;
+  }
+}
+
+.project__media {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-lg);
+  transition:
+    transform .25s var(--ease),
+    border-color .25s var(--ease);
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.project__browser {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .7rem .9rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elev);
+
+  span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  span:nth-child(1) { background: #ff5f57; }
+  span:nth-child(2) { background: #ffbd2e; }
+  span:nth-child(3) { background: #28c840; }
+
+  em {
+    margin-left: auto;
+    font-style: normal;
+    font-size: .75rem;
+    color: var(--text-dim);
+  }
+}
+
+.project__head {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+
+  h3 {
+    margin: 0;
+    font-size: 1.7rem;
+  }
+}
+
+.project__body p {
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  padding: 0;
+  margin: 0 0 1.4rem;
+  list-style: none;
+
+  li {
+    padding: .35rem .65rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg-elev);
+    color: var(--text-muted);
+    font-size: .78rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .project,
+  .project--reverse {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project--reverse {
+    .project__media,
+    .project__body {
+      order: initial;
+    }
+  }
+}

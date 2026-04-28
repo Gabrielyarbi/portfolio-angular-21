@@ -1,0 +1,44 @@
+<header class="nav">
+  <div class="container nav__inner">
+
+    <a href="#top" class="nav__brand">
+      <span class="nav__dot"></span>
+      <span>
+        Gabriel<span class="accent">.</span>Yarbi
+      </span>
+    </a>
+
+    <nav
+      class="nav__links"
+      aria-label="Navegación principal"
+    >
+      @for (link of links(); track link.href) {
+        <a [href]="link.href">
+          {{ link.label }}
+        </a>
+      }
+    </nav>
+
+    <div class="nav__actions">
+
+      <button
+        class="icon-btn"
+        type="button"
+        (click)="toggleTheme()"
+        aria-label="Cambiar tema"
+      >
+        {{ themeIcon() }}
+      </button>
+
+      <a
+        href="cv.pdf"
+        class="btn btn--primary"
+        download
+      >
+        Descargar CV
+      </a>
+
+    </div>
+
+  </div>
+</header>

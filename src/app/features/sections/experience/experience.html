@@ -1,0 +1,58 @@
+<section id="experience" class="section container">
+    <header class="section__head">
+        <span class="eyebrow">04 — Trayectoria</span>
+        <h2>Experiencia profesional</h2>
+    </header>
+
+    <ol class="timeline">
+        @for (item of experiences(); track item.company + item.period) {
+        <li class="tl-item">
+            <span class="tl-dot" aria-hidden="true"></span>
+
+            <article class="tl-card">
+                <header class="tl-card__head">
+                    <h3 class="tl-card__role">
+                        {{ item.role }}
+                    </h3>
+
+                    <span class="company">
+                        {{ item.company }}
+                    </span>
+                </header>
+
+                <span class="meta">
+                    {{ item.period }}
+                    @if (item.location) {
+                    · {{ item.location }}
+                    }
+                </span>
+
+                <ul class="tl-list">
+                    @for (point of item.description; track point) {
+                    <li>{{ point }}</li>
+                    }
+                </ul>
+
+                @if (item.technologies?.length) {
+                <div class="tech-list">
+                    @for (tech of item.technologies; track tech) {
+                    <span class="tech-badge">
+                        {{ tech }}
+                    </span>
+                    }
+                </div>
+                }
+            </article>
+        </li>
+        }
+    </ol>
+    <div class="education">
+        <h3>🎓 Educación</h3>
+
+        <p>
+            <strong>Analista Programador Universitario</strong>
+            — Universidad Nacional de Jujuy
+            <em>(Graduado 2020)</em>
+        </p>
+    </div>
+</section>

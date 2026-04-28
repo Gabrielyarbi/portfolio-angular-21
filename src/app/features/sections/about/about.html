@@ -1,0 +1,61 @@
+<section
+  id="about"
+  class="section container"
+>
+  <header class="section__head">
+    <span class="eyebrow">
+      01 — Sobre mí
+    </span>
+
+    <h2>Perfil profesional</h2>
+  </header>
+
+  <div class="about">
+
+    <p>
+      Desarrollador
+      <strong>Full Stack</strong>
+      con foco en
+      <strong>backend</strong>,
+      especializado en
+      <strong>Node.js</strong>
+      y
+      <strong>NestJS</strong>.
+
+      Participé en migraciones de
+      arquitecturas monolíticas hacia
+      <strong>
+        microservicios desacoplados
+      </strong>,
+      diseño de APIs REST robustas y
+      modernización de plataformas
+      críticas <em>sin downtime</em>.
+    </p>
+
+    <p>
+      Combino sólidos fundamentos
+      técnicos con visión de producto,
+      demostrada al fundar y publicar
+      mis propias aplicaciones móviles
+      bajo la marca
+      <strong>MyProgressApps</strong>.
+    </p>
+
+    <div class="stats">
+      @for (stat of stats(); track stat.label) {
+        <div class="stat">
+
+          <span class="stat__num">
+            {{ stat.value }}
+          </span>
+
+          <span class="stat__label">
+            {{ stat.label }}
+          </span>
+
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

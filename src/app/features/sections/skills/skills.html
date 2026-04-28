@@ -1,0 +1,32 @@
+<section id="skills" class="section container">
+
+  <header class="section__head">
+    <span class="eyebrow">02 — Skills</span>
+    <h2>Tecnologías y herramientas</h2>
+  </header>
+
+  <div class="skills">
+
+    @for (group of groups(); track group.title) {
+    <div class="skill-card">
+
+      <h3>
+        {{ group.title }}
+      </h3>
+
+      <ul>
+
+        @for (item of group.items; track item) {
+        <li>
+          {{ item }}
+        </li>
+        }
+
+      </ul>
+
+    </div>
+    }
+
+  </div>
+
+</section>
