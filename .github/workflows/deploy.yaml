@@ -1,10 +1,7 @@
-name: 'CI/CD: Angular Build & Container Registry'
+name: CI/CD Docker Registry
 
 on:
-  push:
-    branches: ['main']
-  pull_request:
-    branches: ['main']
+  workflow_dispatch:
 
 jobs:
   test-build:
