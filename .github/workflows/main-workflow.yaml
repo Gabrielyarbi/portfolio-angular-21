@@ -1,11 +1,10 @@
-
-name: "CI/CD: Angular Build & Container Registry"
+name: 'CI/CD: Angular Build & Container Registry'
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
   pull_request:
-    branches: ["main"]
+    branches: ['main']
 
 jobs:
   test-build:
@@ -13,6 +12,9 @@ jobs:
     permissions:
       contents: read
       packages: write
+
+    env:
+      IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}
 
     steps:
       - uses: actions/checkout@v4
@@ -49,5 +51,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
-            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ github.sha }}
+            ${{ lower(env.IMAGE_NAME) }}:latest
+            ${{ lower(env.IMAGE_NAME) }}:${{ github.sha }}
