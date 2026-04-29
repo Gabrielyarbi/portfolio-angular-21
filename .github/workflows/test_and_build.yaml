@@ -42,5 +42,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v7
         with:
+          context: .
+          file: ./Dockerfile
           push: true
           tags: ghcr.io/gabrielyarbi/portfolio-angular-21/app:latest
