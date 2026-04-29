@@ -21,7 +21,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     label: 'CV',
-    href: '/cv.pdf',
+    href: 'assets/GABRIEL_HORACIO_YARBI_CV_2026.pdf',
     value: 'Descargar PDF',
     icon: '⬇'
   }

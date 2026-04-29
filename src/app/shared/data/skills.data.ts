@@ -7,6 +7,9 @@ export const SKILL_GROUPS: SkillGroup[] = [
       'AWS Lambda',
       'AWS API Gateway',
       'AWS SES',
+      'AWS EC2',
+      'CI/CD pipeline',
+      'GitHub Container Registry',
       'Firebase',
       'Supabase'
     ]

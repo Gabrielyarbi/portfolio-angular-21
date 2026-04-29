@@ -21,9 +21,9 @@ export const EXPERIENCES: ExperienceItem[] = [
     location: 'Jujuy, Argentina',
     description: [
       'Fundé un proyecto de apps móviles de productividad y formación de hábitos.',
-      'Backend con Firebase, Supabase y AWS.',
+      'Backend con Firebase, Supabase',
       'Landing con arquitectura Serverless en AWS.',
-      'Flujo asíncrono con DynamoDB Streams + Amazon SES.'
+      'Landing con flujo asíncrono con DynamoDB Streams + Amazon SES.'
     ],
     technologies: ['Flutter', 'Dart', 'Firebase', 'Supabase', 'SQlite','AWS','Android Studio']
   },
