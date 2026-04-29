@@ -44,6 +44,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Prepare image name
+        run: echo "IMAGE_NAME=$(echo '${{ env.IMAGE_NAME }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+
       - name: Build and push
         uses: docker/build-push-action@v7
         with:
@@ -51,5 +54,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ lower(env.IMAGE_NAME) }}:latest
-            ${{ lower(env.IMAGE_NAME) }}:${{ github.sha }}
+            ${{ env.IMAGE_NAME }}:latest
+            ${{ env.IMAGE_NAME }}:${{ github.sha }}
