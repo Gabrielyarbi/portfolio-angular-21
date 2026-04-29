@@ -1,4 +1,6 @@
 import { Stat } from '@models/stat.model';
+import { PROJECTS } from './projects.data';
+import { EXPERIENCES } from './experience.data';
 
 export const ABOUT_STATS: Stat[] = [
   {
@@ -6,11 +8,11 @@ export const ABOUT_STATS: Stat[] = [
     label: 'Años de experiencia'
   },
   {
-    value: '4',
+    value: EXPERIENCES.length.toString(),
     label: 'Empresas / proyectos'
   },
   {
-    value: '4',
+    value: PROJECTS.filter(project => project.featured === true).length.toString(),
     label: 'Productos propios en producción'
   }
 ];

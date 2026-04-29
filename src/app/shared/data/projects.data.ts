@@ -22,18 +22,23 @@ export const PROJECTS: Project[] = [
     links: { demo: 'https://myg-products.web.app/' },
   },
   {
-    id: 'sailo',
-    title: 'Plataformas Logísticas',
+    id: 'myprogressgym',
+    title: 'My Progress GYM',
     description:
-      'Desarrollo y mantenimiento de sistemas críticos para logística, transporte y operaciones empresariales en producción.',
-    stack: ['Node.js', 'NestJS', 'AWS', 'Microservices'],
-    featured: true
+      'App para medir rendimiento en el tiempo, crear rutinas, tomar notas y notar el progreso en base a los datos.',
+    stack: ['Flutter', 'Dart', 'Firebase', 'SQLite'],
+    featured: true,
+    image: 'assets/my-progress-gym.jpg',
+    links: { demo: 'https://play.google.com/store/apps/details?id=com.fit.yarbi.g.my_progress_gym' },
   },
-  /*{
-   id: 'sailo2',
-   title: 'Modernización Legacy',
-   description:
-     'Migración de soluciones monolíticas hacia arquitecturas desacopladas, mejorando escalabilidad y continuidad operativa.',
-   stack: ['TypeScript', 'REST API', 'SQL', 'AWS']
- } */
+  {
+    id: 'shoppinglist',
+    title: 'Shopping List',
+    description:
+      'Gestión inteligente de compras, para que no te olvides nada a la hora de ir al super.',
+    stack: ['Flutter', 'Dart', 'SQLite'],
+    featured: true,
+    image: 'assets/lista-de-compras.jpg',
+    links: { demo: 'https://play.google.com/store/apps/details?id=com.myprogressapps.yarbi.g.shopping_list' },
+  }
 ];

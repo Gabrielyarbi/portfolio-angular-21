@@ -33,8 +33,8 @@ export const EXPERIENCES: ExperienceItem[] = [
     period: 'Nov 2021 – Mar 2022',
     location: 'Chile (remoto)',
     description: [
-      'Sistema de Gestión de Licencias de Conducir a nivel nacional.',
-      'Mejoras sobre Laravel + Angular optimizando procesos.',
+      'Mejoras en el Sistema de Gestión de Licencias de Conducir',
+      'Mejoras sobre NestJs + Angular optimizando procesos.',
       'Resolución de incidencias en producción.'
     ],
     technologies: ['Node.js','NestJS', 'Angular','PostgreSql']
