@@ -43,4 +43,4 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           push: true
-          tags: ghcr.io/Gabrielyarbi/portfolio-angular-21/app:latest
+          tags: ghcr.io/gabrielyarbi/portfolio-angular-21/app:latest
