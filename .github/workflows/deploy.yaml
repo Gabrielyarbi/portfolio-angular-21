@@ -3,15 +3,15 @@ name: CI/CD Docker Registry
 on:
   workflow_dispatch:
 
+env:
+  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}
+
 jobs:
   test-build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
-
-    env:
-      IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}
 
     steps:
       - uses: actions/checkout@v4
@@ -53,3 +53,23 @@ jobs:
           tags: |
             ${{ env.IMAGE_NAME }}:latest
             ${{ env.IMAGE_NAME }}:${{ github.sha }}
+
+  deploy:
+    needs: test-build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            RAW_NAME="${{ env.IMAGE_NAME }}"
+            IMAGE_NAME=$(echo "$RAW_NAME" | tr '[:upper:]' '[:lower:]')
+            docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+            docker pull $IMAGE_NAME:latest
+            docker stop portfolio || true
+            docker rm portfolio || true
+            docker run -d --name portfolio -p 80:80 --restart always $IMAGE_NAME:latest
