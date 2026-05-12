@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
     image: 'assets/project-myprogressapps.png',
     links: { demo: 'https://my-progress-apps.web.app/' },
   },
-  {
+/*   {
     id: 'myg',
     title: 'M&G — Envíos',
     description:
@@ -20,7 +20,7 @@ export const PROJECTS: Project[] = [
     featured: true,
     image: 'assets/project-myg.png',
     links: { demo: 'https://myg-products.web.app/' },
-  },
+  }, */
   {
     id: 'myprogressgym',
     title: 'My Progress GYM',

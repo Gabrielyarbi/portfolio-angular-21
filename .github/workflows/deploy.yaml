@@ -1,4 +1,4 @@
-name: CI/CD Docker Registry
+name: CI/CD Docker Registry to EC2
 
 on:
   workflow_dispatch:
