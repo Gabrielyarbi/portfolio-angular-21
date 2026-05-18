@@ -19,7 +19,7 @@ export const PROJECTS: Project[] = [
     ],
     featured: true,
     image: 'assets/mycatalogweb-portfolio.png',
-    links: { demo: 'https://mycatalogweb.web.app/admin/login' },
+    links: { demo: 'https://mycatalogweb.web.app/' },
   },
   {
     id: 'myprogressapps',
