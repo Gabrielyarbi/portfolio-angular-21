@@ -26,6 +26,6 @@ export const HERO_CONTACTS: HeroContact[] = [
   },
   {
     icon: '☎',
-    label: '+54 9 388 464 6062'
+    label: '+54 9 3884691327'
   }
 ];

@@ -2,65 +2,72 @@ import { SkillGroup } from '@models/skill-group.model';
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {
-    title: 'Cloud / Infra',
+    title: 'Frontend moderno',
     items: [
-      'AWS Lambda',
-      'AWS API Gateway',
-      'AWS SES',
-      'AWS EC2',
-      'CI/CD pipeline',
-      'GitHub Container Registry',
-      'Firebase',
-      'Supabase'
-    ]
+      'Angular (6-21)',
+      'TypeScript',
+      'SSR',
+      'Signals',
+      'HTML',
+      'SCSS',
+      'Responsive Design',
+    ],
   },
   {
     title: 'Backend',
     items: [
-      'Node.js/Express',
       'NestJS',
-      'PHP/Laravel/YII2',
-      'REST APIs/Microservices'
-    ]
+      'Node.js',
+      'REST APIs',
+      'Microservicios',
+      'PHP',
+      'Laravel',
+      'Yii2',
+    ],
   },
   {
-    title: 'Frontend',
+    title: 'Producto y arquitectura',
     items: [
-      'Angular (6-21)',
-      'TypeScript/JavaScript',
-      'HTML',
-      'Css/SCSS'
-    ]
+      'Desarrollo end-to-end',
+      'Arquitectura modular',
+      'Multi-tenant',
+      'SEO técnico',
+      'Integración frontend/backend',
+      'Refactor de legacy',
+    ],
   },
-   {
+  {
+    title: 'Datos y plataformas',
+    items: [
+      'PostgreSQL',
+      'Supabase',
+      'Firebase',
+      'MySQL',
+      'SQLite',
+      'DynamoDB',
+      'Cloudinary',
+    ],
+  },
+  {
     title: 'Mobile',
     items: [
       'Flutter',
       'Dart',
+      'Android',
       'Kotlin',
-      'Java'
-    ]
-  },
-
-
-  {
-    title: 'Databases',
-    items: [
-      'PostgreSQL',
-      'MySQL',
-      'SQLite',
-      'Dynamo DB'
-    ]
+      'Java',
+    ],
   },
   {
-    title: 'Tools & Métodologias',
+    title: 'Herramientas y metodologías',
     items: [
       'Git',
-      'Jira',
+      'GitHub Actions',
+      'Docker',
+      'Firebase Hosting',
       'Scrum',
-      'Refactor de legacy',
-      'Code review'
-    ]
+      'Jira',
+      'Code Review',
+    ],
   },
-
 ];

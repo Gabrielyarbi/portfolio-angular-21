@@ -1,101 +1,79 @@
 <section id="projects" class="section container">
   <header class="section__head">
-    <span class="eyebrow">03 — Trabajo</span>
-    <h2>Proyectos en producción</h2>
+    <span class="eyebrow">03 — Proyectos</span>
+    <h2>Productos y proyectos destacados</h2>
     <p class="section__sub">
-      Productos reales publicados y experiencias construidas con foco en negocio.
+      Productos propios y experiencias reales construidas con foco en producto, arquitectura y experiencia de usuario.
     </p>
   </header>
 
   <div class="projects">
 
     @for (project of projects(); track project.id) {
-      <article
-        class="project"
-        [class.project--reverse]="$odd"
-      >
+    <article class="project" [class.project--reverse]="$odd">
 
-        @if (project.links?.demo) {
-          <a
-            class="project__media"
-            [href]="project.links?.demo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="project__browser">
-              <span></span>
-              <span></span>
-              <span></span>
+      @if (project.links?.demo) {
+      <a class="project__media" [href]="project.links?.demo" target="_blank" rel="noopener noreferrer">
+        <div class="project__browser">
+          <span></span>
+          <span></span>
+          <span></span>
 
-              <em>
-                {{ project.links?.demo }}
-              </em>
-            </div>
+          <em>
+            {{ project.links?.demo }}
+          </em>
+        </div>
 
-            @if (project.image) {
-              <img
-                [src]="project.image"
-                [alt]="project.title"
-                loading="lazy"
-              />
-            }
-          </a>
+        @if (project.image) {
+        <img [src]="project.image" [alt]="project.title" loading="lazy" />
         }
+      </a>
+      }
 
-        <div class="project__body">
+      <div class="project__body">
 
-          <div class="project__head">
-            <h3>{{ project.title }}</h3>
+        <div class="project__head">
+          <h3>{{ project.title }}</h3>
 
-            @if (project.featured) {
-              <span class="badge badge--live">
-                <span class="pulse"></span>
-                  En producción
-              </span>
-            }
-          </div>
+          @if (project.featured) {
+          <span class="badge badge--live">
+            <span class="pulse"></span>
+            Destacado
+          </span>
+          }
+        </div>
 
-          <p>
-            {{ project.description }}
-          </p>
+        <p>
+          {{ project.description }}
+        </p>
 
-          <ul class="tags">
-            @for (tech of project.stack; track tech) {
-              <li>{{ tech }}</li>
-            }
-          </ul>
+        <ul class="tags">
+          @for (tech of project.stack; track tech) {
+          <li>{{ tech }}</li>
+          }
+        </ul>
 
-          @if (project.links) {
-            <div class="project__actions">
+        @if (project.links) {
+        <div class="project__actions">
 
-              @if (project.links.demo) {
-                <a
-                  class="btn btn--primary"
-                  [href]="project.links.demo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Ver proyecto ↗
-                </a>
-              }
+          @if (project.links.demo) {
+          <a class="btn btn--primary" [href]="project.links.demo" target="_blank" rel="noopener noreferrer">
+            Ver proyecto ↗
+          </a>
+          }
 
-              @if (project.links.repo) {
-                <a
-                  class="btn btn--ghost"
-                  [href]="project.links.repo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Código
-                </a>
-              }
-
-            </div>
+          @if (project.links.repo) {
+          <a class="btn btn--ghost" [href]="project.links.repo" target="_blank" rel="noopener noreferrer">
+            Código
+          </a>
           }
 
         </div>
+        }
 
-      </article>
+      </div>
+
+    </article>
     }
 
   </div>

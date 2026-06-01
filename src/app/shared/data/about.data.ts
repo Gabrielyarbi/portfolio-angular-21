@@ -13,6 +13,6 @@ export const ABOUT_STATS: Stat[] = [
   },
   {
     value: PROJECTS.filter(project => project.featured === true).length.toString(),
-    label: 'Productos propios en producción'
+    label: 'Productos propios destacados'
   }
 ];

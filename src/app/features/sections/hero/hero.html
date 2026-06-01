@@ -2,53 +2,49 @@
 
   <div class="hero__status">
     <span class="pulse"></span>
-    Disponible para nuevos proyectos
+    Disponible para nuevas oportunidades
   </div>
 
   <h1 class="hero__title">
-    Full stack Developer <br />
-    construyendo
+    Full Stack Developer <br />
+    orientado a producto,
     <span class="accent-grad">
-      sistemas que escalan
+      construyendo aplicaciones modernas
     </span>
   </h1>
 
   <p class="hero__lead">
     Soy <strong>Gabriel Horacio Yarbi</strong>.
-    +5 años diseñando y manteniendo sistemas
-    en producción con <strong>Node.js</strong>,
-    <strong>NestJS</strong>,
-    <strong>AWS Serverless</strong> y <strong>Angular</strong>
+    Full Stack Developer con más de 5 años de experiencia construyendo aplicaciones web modernas y soluciones
+    end-to-end.
+    Especializado en <strong>Angular</strong>, <strong>NestJS</strong> y <strong>SSR</strong>,
+    participando tanto en el desarrollo de nuevos productos como en la evolución de sistemas existentes.
   </p>
 
   <div class="hero__actions">
     @for (action of actions(); track action.href) {
-      <a
-        [href]="action.href"
-        class="btn"
-        [class.btn--primary]="action.variant === 'primary'"
-        [class.btn--ghost]="action.variant === 'ghost'"
-      >
-        {{ action.label }}
-      </a>
+    <a [href]="action.href" class="btn" [class.btn--primary]="action.variant === 'primary'"
+      [class.btn--ghost]="action.variant === 'ghost'">
+      {{ action.label }}
+    </a>
     }
   </div>
 
   <ul class="hero__meta">
     @for (contact of contacts(); track contact.label) {
-      <li>
+    <li>
 
-        <span>{{ contact.icon }}</span>
+      <span>{{ contact.icon }}</span>
 
-        @if (contact.href) {
-          <a [href]="contact.href">
-            {{ contact.label }}
-          </a>
-        } @else {
-          <span>{{ contact.label }}</span>
-        }
+      @if (contact.href) {
+      <a [href]="contact.href">
+        {{ contact.label }}
+      </a>
+      } @else {
+      <span>{{ contact.label }}</span>
+      }
 
-      </li>
+    </li>
     }
   </ul>
 

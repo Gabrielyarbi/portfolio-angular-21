@@ -3,9 +3,9 @@ import { Project } from '@models/project.model';
 export const PROJECTS: Project[] = [
   {
     id: 'mycatalog',
-    title: 'My catalog',
+    title: 'MyCatalog',
     description:
-      'SaaS multi-tenant para crear landing pages y catálogos online en minutos. Permite administrar productos, categorías, themes y configuración visual desde un panel admin, generando páginas públicas optimizadas para compartir con clientes.',
+      'Plataforma SaaS multi-tenant para crear catálogos online y landing pages profesionales. Permite administrar productos, categorías, contenido, themes y configuración visual desde un panel admin, generando páginas públicas con SSR, SEO dinámico y personalización por cliente.',
 
     stack: [
       'Angular 21',
@@ -15,28 +15,37 @@ export const PROJECTS: Project[] = [
       'PostgreSQL',
       'RLS',
       'Cloudinary',
-      'AWS Lambda', 'DynamoDB'
+      'SEO técnico',
+      'Multi-tenant',
     ],
     featured: true,
     image: 'assets/mycatalogweb-portfolio.png',
-    links: { demo: 'https://mycatalogweb.web.app/' },
+    links: { demo: 'https://my-catalog-silk.vercel.app/' },
   },
   {
     id: 'myprogressapps',
     title: 'MyProgressApps',
     description:
-      'Marca personal y landing oficial de mis aplicaciones móviles de productividad. Infraestructura Serverless en AWS: el formulario de contacto entra por API Gateway → Lambda, persiste en DynamoDB y un segundo Lambda dispara una notificación por mail vía Amazon SES.',
-    stack: ['html', 'css', 'js', 'AWS Lambda', 'DynamoDB'],
+      'Ecosistema de productos digitales propios donde desarrollo aplicaciones web y móviles de forma integral, participando en frontend, backend, diseño, bases de datos, SEO, despliegue y evolución de producto. Incluye aplicaciones publicadas en Google Play y nuevos productos en desarrollo.',
+
+    stack: [
+      'Angular',
+      'TypeScript',
+      'Flutter',
+      'Firebase',
+      'Supabase',
+      'Producto digital',
+    ],
     featured: true,
     image: 'assets/project-myprogressapps.png',
     links: { demo: 'https://my-progress-apps.web.app/' },
   },
-
   {
     id: 'myprogressgym',
-    title: 'My Progress GYM',
+    title: 'My Progress Gym',
     description:
-      'App para medir rendimiento en el tiempo, crear rutinas, tomar notas y notar el progreso en base a los datos.',
+      'Aplicación móvil publicada en Google Play para registrar rutinas, tomar notas de entrenamiento y visualizar el progreso físico a lo largo del tiempo.',
+
     stack: ['Flutter', 'Dart', 'Firebase', 'SQLite'],
     featured: true,
     image: 'assets/my-progress-gym.jpg',
@@ -46,7 +55,8 @@ export const PROJECTS: Project[] = [
     id: 'shoppinglist',
     title: 'Shopping List',
     description:
-      'Gestión inteligente de compras, para que no te olvides nada a la hora de ir al super.',
+      'Aplicación móvil publicada en Google Play para gestionar listas de compras de forma simple, rápida y práctica, pensada para evitar olvidos al momento de ir al supermercado.',
+
     stack: ['Flutter', 'Dart', 'SQLite'],
     featured: true,
     image: 'assets/lista-de-compras.jpg',

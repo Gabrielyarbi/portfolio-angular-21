@@ -3,32 +3,28 @@
     <span class="eyebrow">05 — Contacto</span>
     <h2>¿Construimos algo juntos?</h2>
     <p class="section__sub">
-      Estoy abierto a posiciones backend, full stack y proyectos freelance.
+      Estoy abierto a oportunidades full stack, desarrollo de productos web modernos y proyectos freelance.
     </p>
   </header>
 
   <div class="contact">
     @for (link of links(); track link.href) {
-      <a
-        class="contact__card"
-        [href]="link.href"
-        [target]="link.href.startsWith('http') ? '_blank' : null"
-        [rel]="link.href.startsWith('http') ? 'noopener noreferrer' : null"
-      >
-        @if (link.icon) {
-          <span class="contact__icon">
-            {{ link.icon }}
-          </span>
-        }
+    <a class="contact__card" [href]="link.href" [target]="link.href.startsWith('http') ? '_blank' : null"
+      [rel]="link.href.startsWith('http') ? 'noopener noreferrer' : null">
+      @if (link.icon) {
+      <span class="contact__icon">
+        {{ link.icon }}
+      </span>
+      }
 
-        <span class="contact__label">
-          {{ link.label }}
-        </span>
+      <span class="contact__label">
+        {{ link.label }}
+      </span>
 
-        <span class="contact__value">
-          {{ link.value}}
-        </span>
-      </a>
+      <span class="contact__value">
+        {{ link.value}}
+      </span>
+    </a>
     }
   </div>
 </section>
