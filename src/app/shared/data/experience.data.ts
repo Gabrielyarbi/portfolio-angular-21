@@ -37,7 +37,7 @@ export const EXPERIENCES: ExperienceItem[] = [
       'Participé en la implementación de nuevas pantallas y mejoras sobre funcionalidades existentes, colaborando con desarrolladores, QA, arquitectos y líderes técnicos dentro de un entorno Scrum.',
       'Implementé mecanismos de protección de navegación mediante Angular Guards para preservar información en formularios complejos y mejorar la experiencia de usuario.'
     ],
-    technologies: ['Angular', 'PHP', 'Laravel', 'Scrum']
+    technologies: ['Angular', "Node", 'Nest JS', 'Scrum']
   },
   {
     role: 'Full Stack Developer',
